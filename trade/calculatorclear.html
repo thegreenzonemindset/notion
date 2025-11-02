@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Calculator</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!-- Link to your CSS file here (e.g., <link rel="stylesheet" href="style.css">) -->
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" class="display" id="display" disabled>
-    <div class="keys">
-      <button class="button" onclick="clearDisplay()">AC</button>
-      <button class="button" onclick="deleteLast()">DEL</button>
-      <button class="button" onclick="appendOperator('%')">%</button>
-      <button class="button" onclick="appendOperator('/')">/</button>
-      <button class="button" onclick="appendNumber(7)">7</button>
-      <button class="button" onclick="appendNumber(8)">8</button>
-      <button class="button" onclick="appendNumber(9)">9</button>
-      <button class="button" onclick="appendOperator('*')">*</button>
-      <button class="button" onclick="appendNumber(4)">4</button>
-      <button class="button" onclick="appendNumber(5)">5</button>
-      <button class="button" onclick="appendNumber(6)">6</button>
-      <button class="button" onclick="appendOperator('-')">-</button>
-      <button class="button" onclick="appendNumber(1)">1</button>
-      <button class="button" onclick="appendNumber(2)">2</button>
-      <button class="button" onclick="appendNumber(3)">3</button>
-      <button class="button" onclick="appendOperator('+')">+</button>
-      <button class="button" onclick="appendNumber(0)">0</button>
-      <button class="button" onclick="appendDoubleZero()">00</button>
-      <button class="button" onclick="appendDecimal()">.</button>
-      <button class="button" onclick="calculate()">=</button>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" readonly>
+        </div>
+        <div class="keys">
+            <button class="button clear" data-key="clear">C</button>
+            <button class="button operator" data-key="divide">/</button>
+            <button class="button operator" data-key="multiply">*</button>
+            <button class="button operator" data-key="subtract">-</button>
+
+            <button class="button number" data-key="7">7</button>
+            <button class="button number" data-key="8">8</button>
+            <button class="button number" data-key="9">9</button>
+            <button class="button operator" data-key="add">+</button>
+
+            <button class="button number" data-key="4">4</button>
+            <button class="button number" data-key="5">5</button>
+            <button class="button number" data-key="6">6</button>
+            <button class="button equals" data-key="equals">=</button>
+
+            <button class="button number" data-key="1">1</button>
+            <button class="button number" data-key="2">2</button>
+            <button class="button number" data-key="3">3</button>
+            <button class="button decimal" data-key="decimal">.</button>
+
+            <button class="button number zero" data-key="0">0</button>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+
+    <!-- Link to your JavaScript file here (e.g., <script src="script.js"></script>) -->
 </body>
 </html>
